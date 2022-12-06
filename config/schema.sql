@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS shroomies;
+CREATE DATABASE shroomies;
