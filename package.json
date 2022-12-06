@@ -1,0 +1,32 @@
+{
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cloudinary": "^1.32.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.26.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "npx nodemon server.js",
+    "seed": "node seeds"
+  },
+  "name": "shroomies",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eric-simmons/shroomies.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eric-simmons/shroomies/issues"
+  },
+  "homepage": "https://github.com/eric-simmons/shroomies#readme",
+  "description": ""
+}
