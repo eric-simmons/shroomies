@@ -1,11 +1,10 @@
 const { Model, Datatypes } = require('sequelize')
 const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection')
+const location = require('.')
 
 class Post extends Model {
-   
 }
-
 
 Post.init({
     id: {
@@ -20,12 +19,12 @@ Post.init({
     },
     description: {
         type: Datatypes.TEXT
-        
     },
     location: {
         //Might actually be an Integer
-        type: Datatypes.STRING,
+        type: Datatypes.OBJECT,
         //Figure out how to add user location
+        default: getCurrentPosition()
     },
     image: {
         type: Datatypes.STRING,
