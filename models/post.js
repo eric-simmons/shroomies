@@ -1,42 +1,37 @@
-const { Model, Datatypes } = require('sequelize')
+const { Model, DataTypes } = require('sequelize')
 const bcrypt = require('bcrypt')
 const sequelize = require('../config/connection')
-const location = require('.')
 
-class Post extends Model {
-}
+class Post extends Model {}
 
 Post.init({
     id: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
     },
     title: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         allowNull: false
     },
     description: {
-        type: Datatypes.TEXT
+        type: DataTypes.TEXT
     },
     location: {
-        //Might actually be an Integer
-        type: Datatypes.OBJECT,
-        //Figure out how to add user location
+        type: DataTypes.OBJECT,
         default: getCurrentPosition()
     },
     image: {
-        type: Datatypes.STRING,
+        type: DataTypes.STRING,
         //Link to cloudinary
     },
     user_id: {
-        type: Datatypes.INTEGER,
+        type: DataTypes.INTEGER,
         references: {
             model: "user",
             key: "id"
         }
-        
     },
         sequelize,
         timestamps: true,
@@ -45,7 +40,6 @@ Post.init({
         // underscored: true
     }
 )
-
 module.exports = Post
 
 
