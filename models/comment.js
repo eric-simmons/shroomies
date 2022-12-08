@@ -37,11 +37,11 @@ Comment.init(
         },
     },
     {
-        sequelize,
-        timestamps: true,
+        sequelize: sequelize,
+        timestamps: false,
         freezeTableName: true,
         modelName: 'comment',
     }
 );
 
-model.exports = Comment;
+module.exports = Comment;

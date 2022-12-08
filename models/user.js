@@ -7,8 +7,6 @@ class User extends Model {
         return bcrypt.compareSync(loginPassword, this.password)
     }
 }
-
-
 User.init({
     id: {
         type: DataTypes.INTEGER,

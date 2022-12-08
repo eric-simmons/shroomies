@@ -1,8 +1,8 @@
 const sequelize = require('../config/connection')
-const { User, Comment, Mushroom } = require('../models')
+const { User, Comment, Post } = require('../models')
 
 const userData = require('./userData.json')
-const mushroomData = require('./mushroomData.json')
+const postData = require('./postData.json')
 const commentData = require('./commentData.json')
 
 const seedDatabase = async () => {
@@ -14,7 +14,7 @@ const seedDatabase = async () => {
     })
 
 
-    const mushrooms = await Mushroom.bulkCreate(mushroomData, {
+    const posts = await Post.bulkCreate(postData, {
         individualHooks: true, 
         returning: true,
     })
@@ -23,7 +23,7 @@ const seedDatabase = async () => {
         individualHooks: true, 
         returning: true,
     })
-console.log(users, blogs, comments)
+console.log(users, posts, comments)
     process.exit(0)
 }
 
