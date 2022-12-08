@@ -14,7 +14,7 @@ const seedDatabase = async () => {
     })
 
 
-    const mushrooms = await Blog.bulkCreate(mushroomData, {
+    const mushrooms = await Mushroom.bulkCreate(mushroomData, {
         individualHooks: true, 
         returning: true,
     })
