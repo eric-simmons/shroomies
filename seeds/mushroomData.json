@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Unknown",
+        "description": "Red and orange with dark spots on stem and a slightly rounded cap with earth colored fins",
+        "location": "getLocation",
+        "edible": "false",
+        "photo": "link to cloudify"
+    },
+    {
+        "name": "Morel",
+        "description": "Amber colored chambered cap with hollow rubbery stem",
+        "location":"getLocation",
+        "edible": "true",
+        "photo":"link to cloudify"
+    },
+    {
+        "name": "Shiitake",
+        "description": "Flat wide cap with dark underbelly and slightly curled stem ",
+        "location": "getLocation",
+        "edible": "true",
+        "photo": "link to cloudify"
+    },
+    {
+        "name": "Unknown",
+        "description": "Golden wrinkly cap that is rounded with white and blue dusty stems",
+        "location": "getLocation",
+        "edible": "unknown",
+        "photo": "link to cloudify"
+    }
+]
