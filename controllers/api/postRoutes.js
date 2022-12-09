@@ -1,6 +1,7 @@
 //Post location 
+const router = require('express').Router();
+const { Post } = require('../../models');
 
-const router = require(".");
 
 router.post('/', async (req, res) => {
     try {
@@ -11,6 +12,8 @@ router.post('/', async (req, res) => {
       res.status(400).json(err);
     }
   });
+
+  module.exports = router
 
   //  router.get
 //   router.delete
