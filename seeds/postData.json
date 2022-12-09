@@ -2,21 +2,29 @@
     {
         "title": "Unknown",
         "description": "Red and orange with dark spots on stem and a slightly rounded cap with earth colored fins",
-        "image": "https://via.placeholder.com/400/ff0000?text=shroomies"
+        "image": "https://via.placeholder.com/400/2b193d?text=shroomies",
+        "lat": 14.1350982,
+        "lon": 83.9294532
     },
     {
         "title": "Morel",
         "description": "Amber colored chambered cap with hollow rubbery stem",
-        "image":"https://via.placeholder.com/400/ff1000?text=shroomies"
+        "image":"https://via.placeholder.com/400/2c365e?text=shroomies",
+        "lat": 42.1309822,
+        "lon": 64.3434532
     },
     {
         "title": "Shiitake",
         "description": "Flat wide cap with dark underbelly and slightly curled stem ",
-        "image": "https://via.placeholder.com/400/ff2000?text=shroomies"
+        "image": "https://via.placeholder.com/400/484d6d?text=shroomies",
+        "lat": 45.1098222,
+        "lon": 23.3453453
     },
     {
         "title": "Unknown",
         "description": "Golden wrinkly cap that is rounded with white and blue dusty stems",
-        "image": "https://via.placeholder.com/400/ff3000?text=shroomies"
+        "image": "https://via.placeholder.com/400/4b8f8c?text=shroomies",
+        "lat": 40.1350982,
+        "lon": 70.3457532
     }
 ]
