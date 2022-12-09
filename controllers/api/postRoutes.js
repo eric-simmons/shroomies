@@ -1,6 +1,16 @@
-//Post location 
-
 const router = require(".");
+const { Post } = require("../../models");
+
+router.get('/', async (req, res) => {
+    try {
+      const postData = await Post.findAll()
+      res.render(postData)
+    }
+      catch(err) {
+          console.log(err);
+          res.status(500).json(err);
+      };
+});
 
 router.post('/', async (req, res) => {
     try {
@@ -9,7 +19,7 @@ router.post('/', async (req, res) => {
    
     } catch (err) {
       res.status(400).json(err);
-    }
+    };
   });
 
   //  router.get
