@@ -21,6 +21,7 @@ Post.init(
         },
         location: {
             type: DataTypes.STRING,
+            allowNull: true
         },
         image: {
             type: DataTypes.STRING,

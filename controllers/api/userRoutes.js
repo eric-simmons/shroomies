@@ -17,6 +17,7 @@ router.post('/', async (req, res) => {
 });
 
 router.post('/login', async (req, res) => {
+  console.log('req body', req.body)
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
@@ -44,7 +45,8 @@ router.post('/login', async (req, res) => {
     });
 
   } catch (err) {
-    res.status(400).json(err);
+    console.log(err)
+    res.status(500).json(err);
   }
 });
 

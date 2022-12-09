@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const { Post, User } = require('../models')
 
+//serve up posts on home page
 router.get('/', async (req, res) => {
     try {
         let posts = await Post.findAll()
@@ -14,9 +15,8 @@ router.get('/', async (req, res) => {
     } catch(err) {
         res.status(500).json(err)
     }
-  
 })
-
+//serve up post by id
 router.get('/post/:id', async (req, res) => {
     try {
     let post = await Post.findByPk(req.params.id)
