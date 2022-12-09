@@ -1,4 +1,8 @@
+const router = require('express').Router();
+const apiRoutes = require('./api');
+const viewRoutes = require('./viewRoutes')
 
+router.use('/api', apiRoutes);
+router.use(viewRoutes)
 
-//mushroom photos reference mushroom table
-//comment id refers to mushrooms and users\
+module.exports = router;

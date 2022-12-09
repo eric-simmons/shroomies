@@ -1,5 +1,6 @@
 const { Model, DataTypes } = require('sequelize')
 const sequelize = require('../config/connection')
+// const location = require()
 
 class Post extends Model { }
 
@@ -20,7 +21,6 @@ Post.init(
         },
         location: {
             type: DataTypes.OBJECT,
-            default: navigator.geolocation.getCurrentPosition()
         },
         image: {
             type: DataTypes.STRING,
