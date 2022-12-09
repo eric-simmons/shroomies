@@ -19,7 +19,7 @@ Post.init(
             type: DataTypes.TEXT
         },
         location: {
-            type: DataTypes.OBJECT,
+            type: DataTypes.STRING,
             default: navigator.geolocation.getCurrentPosition()
         },
         image: {
