@@ -20,7 +20,7 @@ Post.init(
             type: DataTypes.TEXT
         },
         location: {
-            type: DataTypes.OBJECT,
+            type: DataTypes.STRING,
         },
         image: {
             type: DataTypes.STRING,
