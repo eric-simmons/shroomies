@@ -22,9 +22,11 @@ const handleSubmit = event => {
         email: emailInput.value,
         password: passwordInput.value
     }
+    console.log(userData)
+
         fetch(url, {
             method: 'POST',
-            header: {
+            headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(userData)
