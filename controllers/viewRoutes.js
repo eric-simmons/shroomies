@@ -1,12 +1,13 @@
 const router = require('express').Router()
 const { Post, User } = require('../models')
 
+//serve up posts on home page
 router.get('/', async (req, res) => {
     try {
         let posts = await Post.findAll()
     
         posts = posts.map(post => post.get({ plain: true }))
-    
+    console.log(posts)
         res.render('home', { 
             posts,
             logged_in: req.session.logged_in
@@ -14,9 +15,8 @@ router.get('/', async (req, res) => {
     } catch(err) {
         res.status(500).json(err)
     }
-  
 })
-
+//serve up post by id
 router.get('/post/:id', async (req, res) => {
     try {
     let post = await Post.findByPk(req.params.id)

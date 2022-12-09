@@ -1,14 +1,17 @@
-<h1> Welcome to Tech Blog </h1>
-<div class = "list group">
+<h1> Welcome to Shroomies </h1>
 
 {{#each posts}}
-<a href="/post}" class = "list-group-item list-group-item-action">
-{{title}}
-</a>
-<p>
-{{content}}
-</p>
+<h2>{{title}}</h2>
+<img src="{{image}}" alt="{{title}}">
+<p> lat:{{lat}}  lon:{{lon}}</p>
+
 {{/each}}
+<form id="shroomForm">
+
+<button id = "location">click for location</button>
+
+</form>
 
 
-</div>
+
+<script src="/js/addShroom.js"></script>

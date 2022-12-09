@@ -28,12 +28,7 @@
                         <a class="nav-link" aria-current="page" href="/">Home</a>
                     </li>
 
-                    {{!-- dashboard link --}}
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="/dashboard">Dashboard</a>
-                    </li>
-                    
-                        {{!-- logged in or logged out --}}
+                    {{!-- logged in or logged out --}}
                     <li class="nav-item">
                         {{#if logged_in}}
                         <a class="nav-link" href="/logout" id="logout">Log out</a>
@@ -53,6 +48,8 @@
     {{#if logged_in}}
     <script src="/js/logout.js"></script>
     {{/if}}
+
+    <footer>WARNING consume fungi at your own risk!</footer>
 
 </body>
 

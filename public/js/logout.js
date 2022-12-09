@@ -1,4 +1,3 @@
-const { response } = require('express')
 
 document.getElementById('logout').addEventListener('click', e => {
     e.preventDefault()

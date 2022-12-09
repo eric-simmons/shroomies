@@ -19,8 +19,11 @@ Post.init(
         description: {
             type: DataTypes.TEXT
         },
-        location: {
-            type: DataTypes.STRING,
+        lat: {
+            type: DataTypes.DOUBLE(9,7),
+        },
+        lon: {
+            type: DataTypes.DOUBLE(9,7)
         },
         image: {
             type: DataTypes.STRING,
