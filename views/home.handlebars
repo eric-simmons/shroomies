@@ -1,17 +1,18 @@
-<h1> Welcome to Shroomies </h1>
+<center>
+    <h1> Welcome to Shroomies </h1>
+    {{#each posts}}
+    <h2>{{title}}</h2>
+    <img src="{{image}}" alt="{{title}}">
+    <p> lat:{{lat}} lon:{{lon}}</p>
+    <p>Comments: {{commentCount}}</p>
 
-{{#each posts}}
-<h2>{{title}}</h2>
-<img src="{{image}}" alt="{{title}}">
-<p> lat:{{lat}}  lon:{{lon}}</p>
+    {{/each}}
+    <form id="shroomForm">
 
-{{/each}}
-<form id="shroomForm">
+        <button id="location">click for location</button>
 
-<button id = "location">click for location</button>
-
-</form>
-
+    </form>
+</center>
 
 
 <script src="/js/addShroom.js"></script>
