@@ -1,5 +1,8 @@
 const locationBtn = document.getElementById('location')
-const locationInput = document.getElementById('locationInput')
+const latInput = document.getElementById('latInput')
+const lonInput = document.getElementById('lonInput')
+const latInputWrap = document.getElementById('latInputWrap')
+const lonInputWrap = document.getElementById('lonInputWrap')
 const shroomForm = document.getElementById('shroomForm')
 const shroomBtn = document.getElementById('addShroomBtn')
 
@@ -21,7 +24,11 @@ async function handleSubmit(event) {
         navigator.geolocation.getCurrentPosition(function (position) {
             console.log(position)
             
-            locationInput.value = `lat:${position.coords.latitude}, lon:${position.coords.longitude}`
+           latInputWrap.style.display = 'block'
+           lonInputWrap.style.display = 'block'
+            latInput.value = position.coords.latitude
+            lonInput.value = position.coords.longitude
+
         });
     } else {
         console.log("Geolocation is not supported by this browser.")

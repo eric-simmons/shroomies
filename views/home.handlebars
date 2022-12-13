@@ -29,15 +29,27 @@
                             <label for="description" class="form-label">Description</label>
                             <input type="text" id="descriptionInput" class="form-control" name="description">
                         </div>
-                        <div class="mb-3">
-                            <label for="location" class="form-label">Location</label>
-                            <input type="text" id="locationInput" class="form-control" name="location">
-                            <button id="location">click for current location</button>
+
+
+                        <div class="mb-3" id="latInputWrap" style="display:none;">
+                            <label for="latitude" class="form-label">Latitude</label>
+                            <input type="text" id="latInput" class="form-control" name="latitude" readonly>
                         </div>
+
+                        <div class="mb-3" id="lonInputWrap" style="display:none;">
+                            <label for="longitude" class="form-label">Longitude</label>
+                            <input type="text" id="lonInput" class="form-control" name="longitude" readonly>
+                        </div>
+
+                        <button id="location">click for current location</button>
+
+
                         <div class="mb-3" id="imageInputWrap" style="display:none;">
                             <label for="image" class="form-label">Image</label>
                             <input type="text" id="imageInput" class="form-control" name="image" readonly>
                         </div>
+
+
                         <button id="post" type="submit" class="btn btn-primary">Post</button>
 
                         <button id="upload_widget" class="cloudinary-button">Upload files</button>

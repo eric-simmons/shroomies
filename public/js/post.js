@@ -17,20 +17,22 @@ const myWidget = cloudinary.createUploadWidget({
     }
 )
 
-
-
-
-
 const postFormHandler = async (event) => {
     event.preventDefault()
     const title = document.getElementById('titleInput').value.trim()
     const description = document.getElementById('descriptionInput').value.trim()
-    const location = document.getElementById('locationInput').value.trim()
+    const lat = document.getElementById('latInput')
+    const lon = document.getElementById('lonInput')
 
-    if (title && description && location) {
+    if (title && description && lat && lon) {
         const response = await fetch('/api/posts', {
             method: 'POST',
-            body: JSON.stringify({ title, description, location, image:imgUrl }),
+            body: JSON.stringify({ 
+                title, 
+                description, 
+                lat, 
+                lon,  
+                image:imgUrl }),
             headers: {
                 'Content-Type': 'application/json',
             },
