@@ -1,3 +1,4 @@
+const locationBtn = document.getElementById('location')
 const shroomForm = document.getElementById('shroomForm')
 const shroomBtn = document.getElementById('addShroomBtn')
 
@@ -22,19 +23,4 @@ async function handleSubmit(event) {
         console.log("Geolocation is not supported by this browser.")
     }
 }
-
-
-
-// $('.addShroomBtn').click(function() {
-//     console.log('hey')
-//     $('.postModal').modal('show');
-    
-//  });
-
- shroomBtn.addEventListener('click' , function (){
-    console.log('hey')
- })
-
-
-
-shroomForm.addEventListener('submit', handleSubmit)
+locationBtn.addEventListener('click', handleSubmit)

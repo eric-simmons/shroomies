@@ -5,7 +5,7 @@ const myWidget = cloudinary.createUploadWidget({
     uploadPreset: 'shroomies'}, (error, result) => { 
       if (!error && result && result.event === "success") { 
         console.log('Done! Here is the image info: ', result.info); 
-        const result.info.url
+        // const result.info.url
       }
     }
   )
@@ -14,6 +14,3 @@ const myWidget = cloudinary.createUploadWidget({
     event.preventDefault()
       myWidget.open();
     }, false);
-
-
-   
