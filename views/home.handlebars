@@ -5,85 +5,87 @@
 
 <center>
     <h1> Welcome to Shroomies </h1>
- 
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Post your Shroomies
+    </button>
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-     Post your Shroomies
-        </button>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
+                    <form id="shroomForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Title</label>
+                            <input type="text" id="titleInput" class="form-control" name="title">
+                        </div>
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Description</label>
+                            <input type="text" id="descriptionInput" class="form-control" name="description">
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Location</label>
+                            <input type="text" id="locationInput" class="form-control" name="location">
+                            <button id="location">click for current location</button>
+                        </div>
+                        <div class="mb-3" id="imageInputWrap" style="display:none;">
+                            <label for="image" class="form-label">Image</label>
+                            <input type="text" id="imageInput" class="form-control" name="image" readonly>
+                        </div>
+                        <button id="post" type="submit" class="btn btn-primary">Post</button>
 
-                        <form id="shroomForm">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Title</label>
-                                <input type="text" id="titleInput" class="form-control" name="title">
-                            </div>
-                            <div class="mb-3">
-                                <label for="description" class="form-label">Description</label>
-                                <input type="text" id="descriptionInput" class="form-control" name="description">
-                            </div>
-                            <div class="mb-3">
-                                <label for="location" class="form-label">Location</label>
-                                <input type="text" id="locationInput" class="form-control" name="location">
-                                <button id="location">click for current location</button>
-                            </div>
-                            <button id="post" type="submit" class="btn btn-primary">Post</button>
-
-                            <button id="upload_widget" class="cloudinary-button">Upload files</button>
-                        </form>
+                        <button id="upload_widget" class="cloudinary-button">Upload files</button>
+                    </form>
 
 
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div>
         </div>
-
-{{!-- 
-        {{#each posts}}
-        <h2>{{title}}</h2>
-        <img src="{{image}}" alt="{{title}}">
-        <p> lat:{{lat}} lon:{{lon}}</p>
-        <p>Comments: {{commentCount}}</p>
-
-        {{/each}} --}}
-
-
-
-        {{#if posts.length}}
-  <div class="col-md-6 post-list" id="postList">
-    <h3>Current posts:</h3>
-
-    {{#each posts as |post|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4>Title: {{post.title}}</h4>
-        <p>Description: {{post.description}}</p>
-        <img src="{{image}}" alt="{{title}}">
-        <p>Comments: {{commentCount}}</p>
-      </div>
-        {{!-- if this is the logged in users post show delete button --}}
-        {{!-- {{#if post.user_id === req.session.user_id }} --}}
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
-      </div>
-      {{!-- {{/if}} --}}
     </div>
-    {{/each}}
-  </div>
-  {{/if}}
+
+    {{!--
+    {{#each posts}}
+    <h2>{{title}}</h2>
+    <img src="{{image}}" alt="{{title}}">
+    <p> lat:{{lat}} lon:{{lon}}</p>
+    <p>Comments: {{commentCount}}</p>
+
+    {{/each}} --}}
+
+
+
+    {{#if posts.length}}
+    <div class="col-md-6 post-list" id="postList">
+        <h3>Current posts:</h3>
+
+        {{#each posts as |post|}}
+        <div class="row mb-2">
+            <div class="col-md-8">
+                <h4>Title: {{post.title}}</h4>
+                <p>Description: {{post.description}}</p>
+                <img src="{{image}}" alt="{{title}}">
+                <p>Comments: {{commentCount}}</p>
+            </div>
+            {{!-- if this is the logged in users post show delete button --}}
+            {{!-- {{#if post.user_id === req.session.user_id }} --}}
+            <div class="col-md-4">
+                <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+            </div>
+            {{!-- {{/if}} --}}
+        </div>
+        {{/each}}
+    </div>
+    {{/if}}
 
 </center>
 
