@@ -25,14 +25,15 @@
                         <form id="shroomForm">
                             <div class="mb-3">
                                 <label for="name" class="form-label">Title</label>
-                                <input type="text" class="form-control" name="name">
+                                <input type="text" id="titleInput" class="form-control" name="title">
                             </div>
                             <div class="mb-3">
                                 <label for="description" class="form-label">Description</label>
-                                <input type="text" class="form-control" name="description">
+                                <input type="text" id="descriptionInput" class="form-control" name="description">
                             </div>
                             <div class="mb-3">
                                 <label for="location" class="form-label">Location</label>
+                                <input type="text" id="locationInput" class="form-control" name="location">
                                 <button id="location">click for current location</button>
                             </div>
                             <button id="post" type="submit" class="btn btn-primary">Post</button>
@@ -50,14 +51,39 @@
             </div>
         </div>
 
-
+{{!-- 
         {{#each posts}}
         <h2>{{title}}</h2>
         <img src="{{image}}" alt="{{title}}">
         <p> lat:{{lat}} lon:{{lon}}</p>
         <p>Comments: {{commentCount}}</p>
 
-        {{/each}}
+        {{/each}} --}}
+
+
+
+        {{#if posts.length}}
+  <div class="col-md-6 post-list" id="postList">
+    <h3>Current posts:</h3>
+
+    {{#each posts as |post|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4>Title: {{post.title}}</h4>
+        <p>Description: {{post.description}}</p>
+        <img src="{{image}}" alt="{{title}}">
+        <p>Comments: {{commentCount}}</p>
+      </div>
+        {{!-- if this is the logged in users post show delete button --}}
+        {{!-- {{#if post.user_id === req.session.user_id }} --}}
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
+      </div>
+      {{!-- {{/if}} --}}
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
 
 </center>
 

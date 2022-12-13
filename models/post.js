@@ -19,6 +19,7 @@ Post.init(
         description: {
             type: DataTypes.TEXT
         },
+        //location for typed input
         lat: {
             type: DataTypes.DOUBLE(9,7),
         },

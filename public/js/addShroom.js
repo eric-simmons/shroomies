@@ -1,6 +1,8 @@
 const locationBtn = document.getElementById('location')
+const locationInput = document.getElementById('locationInput')
 const shroomForm = document.getElementById('shroomForm')
 const shroomBtn = document.getElementById('addShroomBtn')
+
 
 // const location = {
 //     coords: {
@@ -18,6 +20,8 @@ async function handleSubmit(event) {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function (position) {
             console.log(position)
+            
+            locationInput.value = `lat:${position.coords.latitude}, lon:${position.coords.longitude}`
         });
     } else {
         console.log("Geolocation is not supported by this browser.")
