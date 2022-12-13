@@ -1,12 +1,12 @@
 const shroomForm = document.getElementById('shroomForm')
+const shroomBtn = document.getElementById('addShroomBtn')
 
-
-const location = {
-    coords: {
-        latitude: 43.056236,
-        longitude: -87.8921468,
-    }
-}
+// const location = {
+//     coords: {
+//         latitude: 43.056236,
+//         longitude: -87.8921468,
+//     }
+// }
 
 async function handleSubmit(event) {
     event.preventDefault()
@@ -23,6 +23,17 @@ async function handleSubmit(event) {
     }
 }
 
+
+
+// $('.addShroomBtn').click(function() {
+//     console.log('hey')
+//     $('.postModal').modal('show');
+    
+//  });
+
+ shroomBtn.addEventListener('click' , function (){
+    console.log('hey')
+ })
 
 
 

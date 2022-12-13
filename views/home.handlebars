@@ -1,18 +1,67 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+    integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 <center>
     <h1> Welcome to Shroomies </h1>
-    {{#each posts}}
-    <h2>{{title}}</h2>
-    <img src="{{image}}" alt="{{title}}">
-    <p> lat:{{lat}} lon:{{lon}}</p>
-    <p>Comments: {{commentCount}}</p>
+ 
 
-    {{/each}}
-    <form id="shroomForm">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+     Post your Shroomies
+        </button>
 
-        <button id="location">click for location</button>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
 
-    </form>
+                        <form id="shroomForm">
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Title</label>
+                                <input type="text" class="form-control" name="name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="description" class="form-label">Description</label>
+                                <input type="text" class="form-control" name="description">
+                            </div>
+                            <div class="mb-3">
+                                <label for="location" class="form-label">Location</label>
+                                <button id="location">click for current location</button>
+                            </div>
+                            <button id="post" type="submit" class="btn btn-primary">Post</button>
+
+                            <button id="upload_widget" class="cloudinary-button">Upload files</button>
+                        </form>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        {{#each posts}}
+        <h2>{{title}}</h2>
+        <img src="{{image}}" alt="{{title}}">
+        <p> lat:{{lat}} lon:{{lon}}</p>
+        <p>Comments: {{commentCount}}</p>
+
+        {{/each}}
+
 </center>
 
 
 <script src="/js/addShroom.js"></script>
+<script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="/js/post.js"></script>
