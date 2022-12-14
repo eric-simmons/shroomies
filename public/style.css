@@ -45,6 +45,10 @@
     src: url(assets/CfOneTwoTreesRegular-4LGp.ttf);
  }
 
+body {
+  font-family: 'Raleway';font-size: 22px;
+}
+
 .postcard {
   justify-content: center;
 }
