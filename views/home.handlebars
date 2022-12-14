@@ -87,12 +87,27 @@
                 <p>Description: {{post.description}}</p>
                 <img width=90% height="auto" src="{{image}}" alt="{{title}}">
                 <p>Comments: {{commentCount}}</p>
+                {{#each comments as |comment|}}
                 <p>Comment Content: {{commentContent}}</p>
+                {{/each}}
                 <p>Lat: {{lat}}</p>
                 <p>Lon: {{lon}}</p>
             </div>
             {{!-- if this is the logged in users post show delete button --}}
             {{!-- {{#if post.user_id === req.session.user_id }} --}}
+            
+
+            <form>
+  
+  <div class="commentForm">
+    <textarea class="commentInput" id="commentInput" rows="3"></textarea>
+    <br>
+    <button id="commentBtn">Comment</button>
+  </div>
+</form>
+
+
+
             {{#if logged_in}}
             <div class="col-md-4">
                 <button class="btn btn-sm btn-danger" data-id="{{post.id}}">DELETE</button>
@@ -110,3 +125,4 @@
 <script src="/js/addShroom.js"></script>
 <script src="https://upload-widget.cloudinary.com/global/all.js" type="text/javascript"></script>
 <script src="/js/post.js"></script>
+<script src="/js/comment.js"></script>

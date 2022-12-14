@@ -2,6 +2,23 @@ const router = require('express').Router()
 // const { response } = require('express')
 const { Post, User, Comment } = require('../models')
 
+
+// router.get('/', async (req,res) => {
+//     try{
+//         let comment = await Comment.findAll({
+//             where: {
+//                 post_Id : 1
+//             }
+//         })
+//         console.log(comment)
+
+//     }
+//     catch(error){
+//         res.status(500).json(error)
+//     }
+// })
+
+
 //serve up posts on home page join with comments
 router.get('/', async (req, res) => {
     try {
@@ -12,23 +29,38 @@ router.get('/', async (req, res) => {
 //serialize post data
         posts = posts.map(post => {
             const postData = post.get({ plain: true })
-            // console.log(postData.comments.content)
+            //  console.log(postData.comments)
             return {
                 ...postData,
                 commentCount: postData.comments.length,
-                // commentContent : posts.comments.content
+                commentContent: postData.comments.content
             }
         })
         //pass posts data and session flag into home template
         res.render('home', {
             posts,
-
             logged_in: req.session.logged_in
         })
     } catch (err) {
         res.status(500).json(err)
     }
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // router.get('/post', async (req, res) => {
 
