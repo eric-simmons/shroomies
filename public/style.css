@@ -32,4 +32,13 @@
       transform: rotate(360deg);
     }
   }
-  
+
+  @font-face {
+    font-family: onetwotrees;
+    font-weight: 900;
+    src: url(CfOneTwoTreesRegular-4LGp.ttf);
+ }
+
+.postcard {
+  justify-content: center;
+}
