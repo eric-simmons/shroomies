@@ -40,7 +40,7 @@
                             <label for="longitude" class="form-label">Longitude</label>
                             <input type="text" id="lonInput" class="form-control" name="longitude" readonly>
                         </div>
-
+                        <div class="lds-dual-ring" style="display:none;"></div>
                         <button id="location">click for current location</button>
 
 
@@ -87,6 +87,8 @@
                 <p>Description: {{post.description}}</p>
                 <img src="{{image}}" alt="{{title}}">
                 <p>Comments: {{commentCount}}</p>
+                <p>Lat: {{lat}}</p>
+                <p>Lon: {{lon}}</p>
             </div>
             {{!-- if this is the logged in users post show delete button --}}
             {{!-- {{#if post.user_id === req.session.user_id }} --}}

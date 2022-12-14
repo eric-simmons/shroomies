@@ -21,8 +21,8 @@ const postFormHandler = async (event) => {
     event.preventDefault()
     const title = document.getElementById('titleInput').value.trim()
     const description = document.getElementById('descriptionInput').value.trim()
-    const lat = document.getElementById('latInput')
-    const lon = document.getElementById('lonInput')
+    const lat = document.getElementById('latInput').value
+    const lon = document.getElementById('lonInput').value
 
     if (title && description && lat && lon) {
         const response = await fetch('/api/posts', {
