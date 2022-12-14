@@ -5,6 +5,12 @@
     --independence: #484d6d;
     --wintergreen: #4b8f8c;
     --tuscany: #c5979d;
+    --sunburst: #A68D56;
+    --cafenoir: #58432C;
+    --alabaster: #EDEADF;
+    --olivedrab: #483E2C;
+    --goldfusion: #787350;
+
 
 }
 
@@ -33,12 +39,29 @@
     }
   }
 
-  @font-face {
+@font-face {
     font-family: onetwotrees;
     font-weight: 900;
-    src: url(CfOneTwoTreesRegular-4LGp.ttf);
+    src: url(assets/CfOneTwoTreesRegular-4LGp.ttf);
  }
 
 .postcard {
   justify-content: center;
+}
+
+.navbar-custom {
+  background-color: var(--goldfusion);
+}
+
+a.navbar-brand {
+  
+  
+  font-family: onetwotrees;
+  font-size: 40px;
+  
+}
+
+.title {
+  font-family: onetwotrees;
+  font-size: 100px;
 }
