@@ -7,28 +7,6 @@ let imgUrl = ''
 const myWidget = cloudinary.createUploadWidget({
     cloudName: 'dwdxzlxen',
     uploadPreset: 'shroomies',
-    styles:{
-        palette: {
-          window: "#FFF",
-          windowBorder: "#90A0B3",
-          tabIcon: "#0E2F5A",
-          menuIcons: "#5A616A",
-          textDark: "#000000",
-          textLight: "#FFFFFF",
-          link:  "#0078FF",
-          action:  "#FF620C",
-          inactiveTabIcon: "#0E2F5A",
-          error: "#F44235",
-          inProgress: "#0078FF",
-          complete: "#20B832",
-          sourceBg: "#E4EBF1"
-        },
-        frame: {
-          background: "#0E2F5B99"
-        },
-        fonts: {
-            "'Cute Font', cursive": "https://fonts.googleapis.com/css?family=Cute+Font",
-        }
 },
     (error, result) => {
         if (!error && result && result.event === "success") {
