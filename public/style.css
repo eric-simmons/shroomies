@@ -46,7 +46,12 @@
  }
 
 body {
-  font-family: 'Raleway';font-size: 22px;
+  font-family: 'Raleway';
+  font-size: 22px;
+  background-image: url('assets/deep-in-the-forest-blur.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .postcard {
@@ -54,7 +59,7 @@ body {
 }
 
 .navbar-custom {
-  background-color: var(--goldfusion);
+  background-color: var(--olivedrab);
 }
 
 a.navbar-brand {
@@ -62,12 +67,30 @@ a.navbar-brand {
   
   font-family: onetwotrees;
   font-size: 40px;
+  color: var(--alabaster);
   
 }
 
 .title {
   font-family: onetwotrees;
   font-size: 100px;
+}
+
+h1, p, a, h3, h4, footer {
+  color: var(--alabaster);
+}
+
+.modal .modal-content {
+  background-color: var(--goldfusion);
+}
+
+.btn {
+  background-color: var(--olivedrab);
+}
+
+#upload_widget {
+  background-color: var(--olivedrab);
+
 }
 #particles-js{
     position: fixed;
