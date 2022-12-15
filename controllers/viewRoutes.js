@@ -2,23 +2,6 @@ const router = require('express').Router()
 // const { response } = require('express')
 const { Post, User, Comment } = require('../models')
 
-
-// router.get('/', async (req,res) => {
-//     try{
-//         let comment = await Comment.findAll({
-//             where: {
-//                 post_Id : 1
-//             }
-//         })
-//         console.log(comment)
-
-//     }
-//     catch(error){
-//         res.status(500).json(error)
-//     }
-// })
-
-
 //serve up posts on home page join with comments
 
 router.get('/', (req,res) => {

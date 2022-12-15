@@ -15,6 +15,16 @@
 }
 
 
+#posts{
+    background-color: var(--olivedrab);
+    padding: 10px;
+    border: #2b193d;
+    border-radius:5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+}
+#comments{
+    background-color: var(--tuscany);
+}
 
 .lds-dual-ring {
     display: inline-block;
@@ -112,11 +122,14 @@ h1, p, a, h3, h4, footer {
 .nav-link{
     padding: 10px;
 }
+.modal-footer{
+    text-align: center;
+}
 
 main{
     z-index: 10;
     position: relative;
-   padding: 100px;
+   padding: 50px;
 }
 footer{
     background: var( --olivedrab);

@@ -1,29 +1,29 @@
 [
     {
         "title": "Unknown",
-        "description": "Red and orange with dark spots on stem and a slightly rounded cap with earth colored fins",
-        "image": "https://via.placeholder.com/400/2b193d?text=shroomies",
+        "description": "Any help identifying these ones??",
+        "image": "https://i0.wp.com/www.lifeandscience.org/wp-content/uploads/2021/04/ukn_mushroom_lem250397_s2.jpg?resize=768%2C576&ssl=1",
         "lat": 14.1350982,
         "lon": 83.9294532
     },
     {
-        "title": "Morel",
-        "description": "Amber colored chambered cap with hollow rubbery stem",
-        "image":"https://via.placeholder.com/400/2c365e?text=shroomies",
+        "title": "Morel?",
+        "description": "Are these Morels? I heard they fetch a pretty penny!",
+        "image":"http://bernheimorg.wpengine.com/wp-content/uploads/2016/12/Mushrooms.jpg",
         "lat": 42.1309822,
         "lon": 64.3434532
     },
     {
-        "title": "Shiitake",
-        "description": "Flat wide cap with dark underbelly and slightly curled stem ",
-        "image": "https://via.placeholder.com/400/484d6d?text=shroomies",
+        "title": "Wisconsin Forage",
+        "description": "My friend and I went foraging in Wisconsin this weekend and found these beautiful mushrooms!",
+        "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/mushrooms-in-the-forest-anita-van-hengel.jpg",
         "lat": 45.1098222,
         "lon": 23.3453453
     },
     {
-        "title": "Unknown",
-        "description": "Golden wrinkly cap that is rounded with white and blue dusty stems",
-        "image": "https://via.placeholder.com/400/4b8f8c?text=shroomies",
+        "title": "Shiitakes??",
+        "description": "Found these in my backyard today! They look kind of like shiitakes...",
+        "image": "https://www.arc2020.eu/wp-content/uploads/2018/12/shiitake-678x381.jpg",
         "lat": 40.1350982,
         "lon": 70.3457532
     }
