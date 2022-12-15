@@ -79,3 +79,16 @@ a.navbar-brand {
 h1, p, a, h3, h4, footer {
   color: var(--alabaster);
 }
+
+.modal .modal-content {
+  background-color: var(--goldfusion);
+}
+
+.btn {
+  background-color: var(--olivedrab);
+}
+
+#upload_widget {
+  background-color: var(--olivedrab);
+
+}
