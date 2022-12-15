@@ -14,7 +14,7 @@ router.post('/', withAuth, async (req, res) => {
       res.status(400).json(error)
     }
   })
-  
+
 router.get('/', async (req, res) => {
     try {
       const commentData = await Comment.findAll()
@@ -26,4 +26,5 @@ router.get('/', async (req, res) => {
     };
   });
 
+  module.exports = router
  
