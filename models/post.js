@@ -19,7 +19,6 @@ Post.init(
         description: {
             type: DataTypes.TEXT
         },
-        //location for typed input
         lat: {
             type: DataTypes.DOUBLE(9,7),
         },
@@ -28,13 +27,12 @@ Post.init(
         },
         image: {
             type: DataTypes.STRING,
-            //Link to cloudinary
         },
         user_id: {
             type: DataTypes.INTEGER,
             references: {
                 model: "user",
-                key: "id"
+                key: "id",
             }
         },
     },
@@ -48,14 +46,4 @@ Post.init(
 
 )
 module.exports = Post
-
-
-//name
-//description non-scientific DISCLAIMER
-//location
-//timestamp
-
-//photo filename
-
-//mushrooms belong to user
 

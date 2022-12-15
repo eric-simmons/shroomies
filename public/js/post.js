@@ -7,28 +7,6 @@ let imgUrl = ''
 const myWidget = cloudinary.createUploadWidget({
     cloudName: 'dwdxzlxen',
     uploadPreset: 'shroomies',
-    styles:{
-        palette: {
-          window: "#FFF",
-          windowBorder: "#90A0B3",
-          tabIcon: "#0E2F5A",
-          menuIcons: "#5A616A",
-          textDark: "#000000",
-          textLight: "#FFFFFF",
-          link:  "#0078FF",
-          action:  "#FF620C",
-          inactiveTabIcon: "#0E2F5A",
-          error: "#F44235",
-          inProgress: "#0078FF",
-          complete: "#20B832",
-          sourceBg: "#E4EBF1"
-        },
-        frame: {
-          background: "#0E2F5B99"
-        },
-        fonts: {
-            "'Cute Font', cursive": "https://fonts.googleapis.com/css?family=Cute+Font",
-        }
 },
     (error, result) => {
         if (!error && result && result.event === "success") {
@@ -40,13 +18,14 @@ const myWidget = cloudinary.createUploadWidget({
 )
 
 const postFormHandler = async (event) => {
+  
     event.preventDefault()
     const title = document.getElementById('titleInput').value.trim()
     const description = document.getElementById('descriptionInput').value.trim()
-    const lat = document.getElementById('latInput').value
-    const lon = document.getElementById('lonInput').value
+    const lat = document.getElementById('latInput').value || null
+    const lon = document.getElementById('lonInput').value || null
 
-    if (title && description && lat && lon) {
+    if (title && description) {
         const response = await fetch('/api/posts', {
             method: 'POST',
             body: JSON.stringify({ 
@@ -60,10 +39,13 @@ const postFormHandler = async (event) => {
             },
         })
         if (response.ok) {
-            document.location.replace('/')
+            document.location.replace('/posts')
         } else {
             alert(response.statusText)
         }
+    }
+    else{
+        alert("Title and Description required for post")
     }
 }
 
@@ -78,7 +60,7 @@ const delButtonHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/post');
+            document.location.replace('/posts');
         } else {
             alert('Failed to delete project');
         }
