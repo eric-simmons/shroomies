@@ -15,6 +15,7 @@
 }
 
 
+
 .lds-dual-ring {
     display: inline-block;
     width: 80px;
@@ -60,13 +61,13 @@ body {
 }
 
 .navbar-custom {
+    display: flex;
   background-color: var(--olivedrab);
   z-index: 12;
+  justify-content: center;
 }
 
 a.navbar-brand {
-  
-  
   font-family: onetwotrees;
   font-size: 40px;
   color: var(--alabaster);
@@ -105,9 +106,17 @@ h1, p, a, h3, h4, footer {
     left: 0;
 }
 
+#navDiv{
+    justify-content: left;
+}
+.nav-link{
+    padding: 10px;
+}
+
 main{
     z-index: 10;
     position: relative;
+   padding: 100px;
 }
 footer{
     background: var( --olivedrab);
@@ -122,3 +131,23 @@ footer{
 #postBtn{
     z-index: 13;
 }
+
+div p {
+    color: black;
+    text-align: center;
+}
+div a {
+    color: black;
+}
+div h2 {
+    text-align: center;
+    padding: 10px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    padding:40px
+}
+ a:hover{
+    text-decoration:underline;
+ }
