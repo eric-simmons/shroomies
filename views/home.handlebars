@@ -4,7 +4,7 @@
 
 
 <center>
-    <h1> Welcome to Shroomies </h1>
+    <h1> Welcome to <span class="title">Shroomies</span></h1>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
         Post your Shroomies
@@ -71,7 +71,7 @@
         <h3>Current posts:</h3>
 
         {{#each posts as |post|}}
-        <div class="row mb-2">
+        <div class="row mb-2 postcard">
             <div class="col-md-8">
                 <h4>Title: {{post.title}}</h4>
                 <p>Description: {{post.description}}</p>
