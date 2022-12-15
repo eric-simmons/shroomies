@@ -60,11 +60,11 @@
             </div>
         </div>
     </div>
-
+<br>
+<br>
 
     {{#if posts.length}}
     <div class="col-md-6 post-list" id="postList">
-        <h3>Current posts:</h3>
 
         {{#each posts as |post|}}
         <div class="row mb-2 postcard" id="posts">
@@ -88,7 +88,7 @@
                     <div class="card card-body">
                         {{#each commentContent as |comment|}}
                         <p>Comment: {{comment}}</p>
-                        <p>________________________________________</p>
+                        <p>_______</p>
                         {{/each}}
                     </div>
                 </div>
@@ -129,6 +129,8 @@
         $('.collapse').collapse('hide');
     })
 </script>
+
+<script src="/utils/formatDate.js"></script>
 <script src="/js/addShroom.js"></script>
 <script src="/js/post.js"></script>
 <script src="/js/comment.js"></script>
