@@ -14,6 +14,7 @@
 
 }
 
+
 .lds-dual-ring {
     display: inline-block;
     width: 80px;
@@ -60,6 +61,7 @@ body {
 
 .navbar-custom {
   background-color: var(--olivedrab);
+  z-index: 12;
 }
 
 a.navbar-brand {
@@ -79,8 +81,12 @@ a.navbar-brand {
 h1, p, a, h3, h4, footer {
   color: var(--alabaster);
 }
+.modal-backdrop {
+    z-index: -1;
+  }
 
 .modal .modal-content {
+    z-index: 14;
   background-color: var(--goldfusion);
 }
 
@@ -90,7 +96,6 @@ h1, p, a, h3, h4, footer {
 
 #upload_widget {
   background-color: var(--olivedrab);
-
 }
 #particles-js{
     position: fixed;
@@ -113,4 +118,7 @@ footer{
     width: 100%;
     text-align: center;
     padding: 5px;
+}
+#postBtn{
+    z-index: 13;
 }
