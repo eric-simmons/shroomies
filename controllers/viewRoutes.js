@@ -21,7 +21,13 @@ const { Post, User, Comment } = require('../models')
 
 //serve up posts on home page join with comments
 
-router.get('/', async (req, res) => {
+router.get('/', (req,res) => {
+    res.render('landingpage',{
+        logged_in: req.session.logged_in
+    })
+})
+
+router.get('/posts', async (req, res) => {
     try {
         let posts = await Post.findAll({
             include: [{ model: Comment }],
@@ -50,6 +56,8 @@ router.get('/', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
+
 
 // router.get('/', async (req, res) => {
 //     try {
@@ -89,6 +97,7 @@ router.get('/post/:id', async (req, res) => {
         res.status(500).json(err)
     }
 })
+
 
 router.get('/login', (req, res) => {
     res.render('login')

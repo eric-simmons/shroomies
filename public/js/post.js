@@ -18,13 +18,14 @@ const myWidget = cloudinary.createUploadWidget({
 )
 
 const postFormHandler = async (event) => {
+  
     event.preventDefault()
     const title = document.getElementById('titleInput').value.trim()
     const description = document.getElementById('descriptionInput').value.trim()
-    const lat = document.getElementById('latInput').value
-    const lon = document.getElementById('lonInput').value
+    const lat = document.getElementById('latInput').value || null
+    const lon = document.getElementById('lonInput').value || null
 
-    if (title && description && lat && lon) {
+    if (title && description) {
         const response = await fetch('/api/posts', {
             method: 'POST',
             body: JSON.stringify({ 
@@ -38,10 +39,13 @@ const postFormHandler = async (event) => {
             },
         })
         if (response.ok) {
-            document.location.replace('/')
+            document.location.replace('/posts')
         } else {
             alert(response.statusText)
         }
+    }
+    else{
+        alert("Title and Description required for post")
     }
 }
 
@@ -56,7 +60,7 @@ const delButtonHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/post');
+            document.location.replace('/posts');
         } else {
             alert('Failed to delete project');
         }

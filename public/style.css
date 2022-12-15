@@ -69,3 +69,25 @@ a.navbar-brand {
   font-family: onetwotrees;
   font-size: 100px;
 }
+#particles-js{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+}
+
+main{
+    z-index: 10;
+    position: relative;
+}
+footer{
+    background: var( --olivedrab);
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    left: 0; 
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
