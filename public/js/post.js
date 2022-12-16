@@ -18,7 +18,6 @@ const myWidget = cloudinary.createUploadWidget({
 )
 
 const postFormHandler = async (event) => {
-  
     event.preventDefault()
     const title = document.getElementById('titleInput').value.trim()
     const description = document.getElementById('descriptionInput').value.trim()

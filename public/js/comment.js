@@ -1,13 +1,12 @@
 
 
-
+//front end js to retrieve new comment data
 
 const commentFormHandler = async (event) => {
     event.preventDefault()
 
     const commentId = event.target.dataset.id
    const comment = event.target.querySelector('.commentInput').value
-   console.log( commentId, comment)
     //const comment = document.getElementById('commentInput').value.trim()
 
 

@@ -69,11 +69,13 @@
         {{#each posts as |post|}}
         <div class="row mb-2 postcard" id="posts">
             <div class="col-md-8">
+                <p>Posted by: {{post.user.email}}</p>
                 <h4>Title: {{post.title}}</h4>
                 <p>Description: {{post.description}}</p>
                 <img width=100% height="auto" src="{{image}}" alt="{{title}}">
                 <p>Coordinates: {{lat}}, {{lon}}</p>
                 <p></p>
+
 
 
                 {{#if comments.length}}
@@ -86,10 +88,16 @@
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body">
-                        {{#each commentContent as |comment|}}
-                        <p>Comment: {{comment}}</p>
-                        <p>_______</p>
+
+                        {{#each comments as |comment|}}
+                                <p>{{comment.user.name}}: {{comment.content}}</p>
                         {{/each}}
+
+
+                        {{!-- {{#each commentContent as |comment|}}
+                        <p>{{commentUser}}: {{comment}}</p>
+                        <p>_______</p>
+                        {{/each}} --}}
                     </div>
                 </div>
                 <br>
@@ -108,20 +116,11 @@
             </div>
         </div>
 
-
-
-
-
-
-
-
-
     </div>
     {{/each}}
     <br>
     </div>
     {{/if}}
-
 </center>
 
 <script>
@@ -130,7 +129,7 @@
     })
 </script>
 
-<script src="/utils/formatDate.js"></script>
+{{!-- <script src="/utils/formatDate.js"></script> --}}
 <script src="/js/addShroom.js"></script>
 <script src="/js/post.js"></script>
 <script src="/js/comment.js"></script>

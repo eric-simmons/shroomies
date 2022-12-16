@@ -4,27 +4,31 @@
         "description": "Any help identifying these ones??",
         "image": "https://i0.wp.com/www.lifeandscience.org/wp-content/uploads/2021/04/ukn_mushroom_lem250397_s2.jpg?resize=768%2C576&ssl=1",
         "lat": 14.1350982,
-        "lon": 83.9294532
+        "lon": 83.9294532,
+        "user_id":1
     },
     {
         "title": "Morel?",
         "description": "Are these Morels? I heard they fetch a pretty penny!",
         "image":"http://bernheimorg.wpengine.com/wp-content/uploads/2016/12/Mushrooms.jpg",
         "lat": 42.1309822,
-        "lon": 64.3434532
+        "lon": 64.3434532,
+        "user_id":1
     },
     {
         "title": "Wisconsin Forage",
         "description": "My friend and I went foraging in Wisconsin this weekend and found these beautiful mushrooms!",
         "image": "https://images.fineartamerica.com/images/artworkimages/mediumlarge/2/mushrooms-in-the-forest-anita-van-hengel.jpg",
         "lat": 45.1098222,
-        "lon": 23.3453453
+        "lon": 23.3453453,
+        "user_id":1
     },
     {
         "title": "Shiitakes??",
         "description": "Found these in my backyard today! They look kind of like shiitakes...",
         "image": "https://www.arc2020.eu/wp-content/uploads/2018/12/shiitake-678x381.jpg",
         "lat": 40.1350982,
-        "lon": 70.3457532
+        "lon": 70.3457532,
+        "user_id":1
     }
 ]

@@ -4,34 +4,61 @@ const { Post, User, Comment } = require('../models')
 
 //serve up posts on home page join with comments
 
-router.get('/', (req,res) => {
-    res.render('landingpage',{
+router.get('/', (req, res) => {
+    res.render('landingpage', {
         logged_in: req.session.logged_in
     })
 })
 
+//finding post data from database and include comment and user data
 router.get('/posts', async (req, res) => {
     try {
         let posts = await Post.findAll({
-            include: [{ model: Comment }],
+            include: [
+                {
+                    model: Comment,
+                    include: [{ model: User }]
+                },
+                { model: User }],
             order: [['createdAt', 'DESC']],
         })
+
         //serialize post data
         posts = posts.map(post => {
             const postData = post.get({ plain: true })
-            //   console.log(postData.comments)
+            // console.log(postData)
             return {
                 ...postData,
+                // commentUser: postData.comments.user_id,
                 commentCount: postData.comments.length,
-                commentContent: postData.comments.map(comment =>{
+                commentContent: postData.comments.map(comment => {
                     return comment.content
                 }),
+                //boolean to check if the post belongs to the logged in user
                 belongsToUser: req.session.user_id === postData.user_id
             }
         })
-        //pass posts data and session flag into home template
+        console.log(JSON.stringify(posts, null, 2))
+
+
+
+        // let comments = await Comment.findAll({
+        //     include: [{ model: User }]
+        // })
+        // comments = comments.map(comment => {
+        //     const commentData = comment.get({ plain: true })
+        //     return {
+        //         ...commentData,
+        //         commentUser: commentData.user.name
+        //     }
+        // })
+
+
+        //  console.log(comments)
+        //pass posts/comments data and session flag into home template
         res.render('home', {
             posts,
+            // comments,
             user_id: req.session.user_id,
             logged_in: req.session.logged_in
         })
@@ -42,23 +69,8 @@ router.get('/posts', async (req, res) => {
 
 
 
-// router.get('/', async (req, res) => {
-//     try {
-//         let comments = await Comment.findAll()
-//         comments = comments.map(comment => {
-//             const commentData = comment.get({plain:true})
-//             console.log(commentData)
-//         })
-//         res.render('home', {
-//             comments,
-//             logged_in: req.session.logged_in
-//         })
-//     }
-//     catch (error) {
-//         res.status(500).json(error)
-//     }
-// })
-// serve up post by id join with user?
+
+
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {

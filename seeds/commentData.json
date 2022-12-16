@@ -1,20 +1,32 @@
 [
-    {   "post_id": 1,
+    {
+        "post_id": 1,
+        "user_id":2,
         "content": "No way are these Morels...not even close....keep foraging!!"
     },
-    {   "post_id": 4,
+    {
+        "post_id": 4,
+        "user_id":2,
         "content": "Holy cow pie I cant believe you discovered truffles in Wisconsin!"
     },
-    {   "post_id": 2,
+    {
+        "post_id": 2,
+        "user_id":2,
         "content": "Can you tell me where you found these? I've been looking for Hen of the Woods all over but havent been able to locate any..."
     },
-    {   "post_id": 2,
+    {
+        "post_id": 2,
+        "user_id":2,
         "content": "There is no way that those are Hen of the Woods.."
     },
-    {   "post_id": 3,
+    {
+        "post_id": 3,
+        "user_id":2,
         "content": "My mom has an amazing reciped for those that I will share with you if you would like!"
     },
-    {   "post_id": 1,
+    {
+        "post_id": 1,
+        "user_id":2,
         "content": "These mushrooms changed my life!!"
     }
 ]
