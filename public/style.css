@@ -146,11 +146,11 @@ footer{
 }
 
 div p {
-    color: black;
+    color: antiquewhite;
     text-align: center;
 }
 div a {
-    color: black;
+    color: goldenrod;
 }
 div h2 {
     text-align: center;
@@ -164,3 +164,4 @@ nav a{
  a:hover{
     text-decoration:underline;
  }
+
