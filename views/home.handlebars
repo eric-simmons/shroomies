@@ -64,9 +64,10 @@
 <br>
 
     {{#if posts.length}}
+        {{#each posts as |post|}}
     <div class="col-md-6 post-list" id="postList">
 
-        {{#each posts as |post|}}
+    
         <div class="row mb-2 postcard" id="posts">
             <div class="col-md-8">
                 <h4>Title: {{post.title}}</h4>
@@ -80,14 +81,14 @@
                 <div>
                     <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
                         data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                        <p>Comments: {{commentCount}}</p>
+                        <p class="comments">Comments: {{commentCount}}</p>
                     </button>
                    <br>
                 </div>
                 <div class="collapse" id="collapseExample">
                     <div class="card card-body">
                         {{#each commentContent as |comment|}}
-                        <p>Comment: {{comment}}</p>
+                        <p class="comments">Comment: {{comment}}</p>
                         <p>_______</p>
                         {{/each}}
                     </div>
