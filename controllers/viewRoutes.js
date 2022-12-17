@@ -5,9 +5,15 @@ const { Post, User, Comment } = require('../models')
 //serve up posts on home page join with comments
 
 router.get('/', (req, res) => {
-    res.render('landingpage', {
-        logged_in: req.session.logged_in
-    })
+    try{
+        res.render('landingpage', {
+            logged_in: req.session.logged_in
+        })
+    }
+    catch(error){
+        res.status(500).json(err)
+    }
+   
 })
 
 //finding post data from database and include comment and user data
@@ -53,10 +59,6 @@ router.get('/posts', async (req, res) => {
     }
 })
 
-
-
-
-
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
@@ -81,7 +83,13 @@ router.get('/post/:id', async (req, res) => {
 
 
 router.get('/login', (req, res) => {
-    res.render('login')
+    try {
+        res.render('login')
+    }
+    catch (error) {
+        res.status(500).json(err)
+    }
+
 })
 
 
