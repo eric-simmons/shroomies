@@ -16,6 +16,7 @@ router.get('/posts', async (req, res) => {
         let posts = await Post.findAll({
             include: [
                 {
+                    //nested include to get username for each comment
                     model: Comment,
                     include: [{ model: User }]
                 },
@@ -38,23 +39,8 @@ router.get('/posts', async (req, res) => {
                 belongsToUser: req.session.user_id === postData.user_id
             }
         })
-        console.log(JSON.stringify(posts, null, 2))
+        // console.log(JSON.stringify(posts, null, 2))
 
-
-
-        // let comments = await Comment.findAll({
-        //     include: [{ model: User }]
-        // })
-        // comments = comments.map(comment => {
-        //     const commentData = comment.get({ plain: true })
-        //     return {
-        //         ...commentData,
-        //         commentUser: commentData.user.name
-        //     }
-        // })
-
-
-        //  console.log(comments)
         //pass posts/comments data and session flag into home template
         res.render('home', {
             posts,
