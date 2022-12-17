@@ -60,14 +60,14 @@
             </div>
         </div>
     </div>
-<br>
-<br>
+    <br>
+    <br>
 
     {{#if posts.length}}
-        {{#each posts as |post|}}
+    {{#each posts as |post|}}
     <div class="col-md-6 post-list" id="postList">
 
-    
+
         <div class="row mb-2 postcard" id="posts">
             <div class="col-md-8">
                 <p>Posted by: {{post.user.email}}</p>
@@ -85,13 +85,12 @@
                         data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
                         <p>Comments: {{commentCount}}</p>
                     </button>
-                   <br>
+                    <br>
                 </div>
                 <div class="collapse" id="collapseExample">
-                    <div class="card card-body">
-
+                    <div id="commentDrop" class="card card-body">
                         {{#each comments as |comment|}}
-                                <p>{{comment.user.name}}: {{comment.content}}</p>
+                        <p id="commentBox">{{comment.user.name}}: {{comment.content}}</p>
                         {{/each}}
                     </div>
                 </div>
@@ -104,10 +103,10 @@
                     <button class="commentBtn btn btn-primary">Leave a Comment</button>
                 </form>
                 {{#if belongsToUser}}
-                   
-                        <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete Your Post</button>
-                    
-                    {{/if}}
+
+                <button class="btn btn-sm btn-danger" data-id="{{post.id}}">Delete Your Post</button>
+
+                {{/if}}
             </div>
         </div>
 
@@ -124,7 +123,8 @@
     })
 </script>
 
-{{!-- <script src="/utils/formatDate.js"></script> --}}
+{{!--
+<script src="/utils/formatDate.js"></script> --}}
 <script src="/js/addShroom.js"></script>
 <script src="/js/post.js"></script>
 <script src="/js/comment.js"></script>

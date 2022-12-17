@@ -25,6 +25,17 @@
 #comments{
     background-color: var(--tuscany);
 }
+#commentDrop{
+  padding: 15px;
+  margin-top: 15px;
+  background-color: (--alabaster);
+}
+#commentBox{
+  background-color: var(--cafenoir);
+  padding: 10px;
+  color: var(--alabaster);
+  border-radius: 5px;
+}
 
 .lds-dual-ring {
     display: inline-block;
