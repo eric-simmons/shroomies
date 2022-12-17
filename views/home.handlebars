@@ -64,9 +64,10 @@
 <br>
 
     {{#if posts.length}}
+        {{#each posts as |post|}}
     <div class="col-md-6 post-list" id="postList">
 
-        {{#each posts as |post|}}
+    
         <div class="row mb-2 postcard" id="posts">
             <div class="col-md-8">
                 <p>Posted by: {{post.user.email}}</p>
@@ -97,7 +98,7 @@
                         {{!-- {{#each commentContent as |comment|}}
                         <p>{{commentUser}}: {{comment}}</p>
                         <p>_______</p>
-                        {{/each}} --}}
+                        {{/each}}
                     </div>
                 </div>
                 <br>
