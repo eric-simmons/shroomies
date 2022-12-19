@@ -19,10 +19,7 @@ Create an account to begin sharing your favorite foraging content! Upload photos
 * [handlebars](https://handlebarsjs.com/)
 
 
-## Demonstration
- Coming soon!
 
 ## Use
-Coming soon!
-* [Heroku] 
+* [Heroku](https://shroomies.herokuapp.com/)
 

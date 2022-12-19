@@ -58,7 +58,7 @@ router.post('/logout', (req, res) => {
     } else {
       res.status(404).end();
     }
-  } 
+  }
   catch (error) {
     res.status(500).json(err)
   }
