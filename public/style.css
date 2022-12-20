@@ -82,8 +82,9 @@ body {
 }
 
 .navbar-custom {
-    display: flex;
+  display: flex;
   background-color: var(--olivedrab);
+  background-image: url('assets/tree-bark2.jpeg');
   z-index: 12;
   justify-content: center;
 }
@@ -144,6 +145,7 @@ main{
 }
 footer{
     background: var( --olivedrab);
+    background-image: url('assets/tree-bark2.jpeg');
     position: fixed;
     z-index: 11;
     bottom: 0;
